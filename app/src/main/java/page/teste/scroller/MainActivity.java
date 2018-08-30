@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (toolbar != null) {
             setSupportActionBar(toolbar);
-            toolbar.setTitle("G PlayStore");
+            toolbar.setTitle("Scroll");
 
         }
 
