@@ -1,5 +1,6 @@
 package page.teste.scroller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
 import page.teste.scroller.adapters.RecyclerViewDataAdapter;
+import page.teste.scroller.details.CourseDetailActivity;
 import page.teste.scroller.models.SectionDataModel;
 import page.teste.scroller.models.SingleItemModel;
 
@@ -51,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         my_recycler_view.setAdapter(adapter);
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+      startActivity(new Intent(MainActivity.this, CourseDetailActivity.class));
     }
 
     public void createDummyData() {
